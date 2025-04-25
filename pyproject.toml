@@ -51,14 +51,6 @@ test = [
 [tool.pdm.resolution]
 respect-source-order = true
 
-# [tool.pdm.resolution.overrides]
-# cua-agent = { path = "libs/agent" }
-# cua-computer = { path = "libs/computer" }
-# cua-computer-server = { path = "libs/computer-server" }
-# cua-mcp-server = { path = "libs/mcp-server" }
-# cua-omniparser = { path = "libs/omniparser" }
-# pylume = { path = "libs/pylume" }
-
 [tool.black]
 line-length = 100
 target-version = ["py310"]

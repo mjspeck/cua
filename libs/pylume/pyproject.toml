@@ -15,19 +15,23 @@ classifiers = [
 ]
 dependencies = ["pydantic>=2.11.1"]
 description = "Python SDK for lume - run macOS and Linux VMs on Apple Silicon"
+dynamic = ["version"]
 keywords = ["apple-silicon", "macos", "virtualization", "vm"]
 license = { text = "MIT" }
 name = "pylume"
 readme = "README.md"
 requires-python = ">=3.9"
-version = "0.1.0"
+
+[tool.pdm.version]
+path = "pylume/__init__.py"
+source = "file"
 
 [project.urls]
 homepage = "https://github.com/trycua/pylume"
 repository = "https://github.com/trycua/pylume"
 
-[tool.pdm]
-distribution = true
+# [tool.pdm]
+# distribution = true
 
 [tool.pdm.dev-dependencies]
 dev = [
@@ -37,34 +41,34 @@ dev = [
     "pytest>=7.0.0",
 ]
 
-[tool.black]
-line-length = 100
-target-version = ["py310"]
+# [tool.black]
+# line-length = 100
+# target-version = ["py310"]
 
-[tool.ruff]
-fix = true
-line-length = 100
-select = ["B", "E", "F", "I"]
-target-version = "py310"
+# [tool.ruff]
+# fix = true
+# line-length = 100
+# select = ["B", "E", "F", "I"]
+# target-version = "py310"
 
-[tool.ruff.format]
-docstring-code-format = true
+# [tool.ruff.format]
+# docstring-code-format = true
 
-[tool.mypy]
-check_untyped_defs = true
-disallow_untyped_defs = true
-ignore_missing_imports = true
-python_version = "3.10"
-show_error_codes = true
-strict = true
-warn_return_any = true
-warn_unused_ignores = false
+# [tool.mypy]
+# check_untyped_defs = true
+# disallow_untyped_defs = true
+# ignore_missing_imports = true
+# python_version = "3.10"
+# show_error_codes = true
+# strict = true
+# warn_return_any = true
+# warn_unused_ignores = false
 
-[tool.pytest.ini_options]
-asyncio_mode = "auto"
-python_files = "test_*.py"
-testpaths = ["tests"]
+# [tool.pytest.ini_options]
+# asyncio_mode = "auto"
+# python_files = "test_*.py"
+# testpaths = ["tests"]
 
-[tool.pdm.build]
-includes = ["pylume/"]
-source-includes = ["LICENSE", "README.md", "tests/"]
+# [tool.pdm.build]
+# includes = ["pylume/"]
+# source-includes = ["LICENSE", "README.md", "tests/"]
